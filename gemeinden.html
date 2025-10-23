@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Finden Sie eine orthodoxe Gemeinde in Ihrer Nähe - Deutschland, Österreich, Niederlande.">
+  <title>Gemeinden & Kirchen - Antiochenisch-Orthodoxe Metropolie</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☦</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-main">Zum Hauptinhalt springen</a>
+
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">☦</div>
+        <span>Metropolie von Deutschland</span>
+      </a>
+      
+      <button class="nav-toggle" aria-label="Navigation öffnen" id="navToggle">☰</button>
+      
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="gemeinden.html">Gemeinden</a></li>
+          <li><a href="gottesdienste.html">Gottesdienste</a></li>
+          <li><a href="termine.html">Termine</a></li>
+          <li><a href="nachrichten.html">Nachrichten</a></li>
+          <li><a href="kloster.html">Kloster</a></li>
+          <li><a href="chor.html">Chor</a></li>
+          <li><a href="pastorale-arbeit.html">Pastorale Arbeit</a></li>
+          <li><a href="mediencenter.html">Mediencenter</a></li>
+          <li><a href="kontakt.html" class="cta-button">Kontakt & Spenden</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <section class="hero" style="height: 40vh; min-height: 300px;">
+      <img src="https://images.unsplash.com/photo-1548625361-27e511a93d3f?w=1920&h=800&fit=crop&q=80" 
+           alt="Orthodoxe Kirche" 
+           class="hero-image"
+           loading="eager">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Unsere Gemeinden</h1>
+        <p>Finden Sie eine orthodoxe Gemeinde in Ihrer Nähe</p>
+      </div>
+    </section>
+
+    <!-- Interaktive Karte -->
+    <section class="section">
+      <div class="container-wide">
+        <div class="map-container">
+          <div id="map"></div>
+          
+          <div class="map-sidebar">
+            <div class="map-filters">
+              <div class="filter-group">
+                <label for="filterCountry">Land</label>
+                <select id="filterCountry">
+                  <option value="">Alle Länder</option>
+                  <option value="deutschland">Deutschland</option>
+                  <option value="oesterreich">Österreich</option>
+                  <option value="niederlande">Niederlande</option>
+                </select>
+              </div>
+              
+              <div class="filter-group">
+                <label for="filterState">Bundesland / Region</label>
+                <select id="filterState">
+                  <option value="">Alle Regionen</option>
+                </select>
+              </div>
+            </div>
+            
+            <h3>Gemeinden</h3>
+            <ul class="church-list" id="churchList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gemeindeliste Deutschland -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center mb-lg">Gemeinden in Deutschland</h2>
+        
+        <div class="grid grid-3">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1553532435-93d532a45f15?w=600&h=400&fit=crop&q=80" 
+                 alt="St. Georg München" 
+                 class="card-image"
+                 loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">St. Georg München</h3>
+              <p><strong>📍 Adresse:</strong><br>Musterstraße 10, 80331 München, Bayern</p>
+              <p><strong>👨‍🦳 Priester:</strong> Pfarrer Johannes Müller</p>
+              <p><strong>👤 Vorsitzender:</strong> Andreas Schmidt</p>
+              <p><strong>🕐 Gottesdienste:</strong><br>Sonntag 10:00 Uhr - Göttliche Liturgie</p>
+              <p><strong>📞 Kontakt:</strong> +49 89 123456</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=600&h=400&fit=crop&q=80" 
+                 alt="Hl. Kreuz Berlin" 
+                 class="card-image"
+                 loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">Hl. Kreuz Berlin</h3>
+              <p><strong>📍 Adresse:</strong><br>Kirchstraße 25, 10115 Berlin</p>
+              <p><strong>👨‍🦳 Priester:</strong> Pfarrer Michael Wagner</p>
+              <p><strong>👤 Vorsitzender:</strong> Thomas Becker</p>
+              <p><strong>🕐 Gottesdienste:</strong><br>Sonntag 09:00 Uhr - Göttliche Liturgie</p>
+              <p><strong>📞 Kontakt:</strong> +49 30 654321</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?w=600&h=400&fit=crop&q=80" 
+                 alt="St. Johannes Köln" 
+                 class="card-image"
+                 loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">St. Johannes Köln</h3>
+              <p><strong>📍 Adresse:</strong><br>Domstraße 42, 50667 Köln, NRW</p>
+              <p><strong>👨‍🦳 Priester:</strong> Pfarrer Stefan Hoffmann</p>
+              <p><strong>👤 Vorsitzender:</strong> Martin Koch</p>
+              <p><strong>🕐 Gottesdienste:</strong><br>Sonntag 10:30 Uhr - Göttliche Liturgie</p>
+              <p><strong>📞 Kontakt:</strong> +49 221 987654</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1548625361-27e511a93d3f?w=600&h=400&fit=crop&q=80" 
+                 alt="Hl. Dimitrios Frankfurt" 
+                 class="card-image"
+                 loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">Hl. Dimitrios Frankfurt</h3>
+              <p><strong>📍 Adresse:</strong><br>Mainzer Straße 88, 60329 Frankfurt, Hessen</p>
+              <p><strong>👨‍🦳 Priester:</strong> Pfarrer Daniel Richter</p>
+              <p><strong>👤 Vorsitzender:</strong> Frank Weber</p>
+              <p><strong>🕐 Gottesdienste:</strong><br>Samstag 18:00 Uhr - Vesper<br>Sonntag 10:00 Uhr - Göttliche Liturgie</p>
+              <p><strong>📞 Kontakt:</strong> +49 69 456789</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=600&h=400&fit=crop&q=80" 
+                 alt="St. Maria Stuttgart" 
+                 class="card-image"
+                 loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">St. Maria Stuttgart</h3>
+              <p><strong>📍 Adresse:</strong><br>Königstraße 17, 70173 Stuttgart, Baden-Württemberg</p>
+              <p><strong>👨‍🦳 Priester:</strong> Pfarrer Peter Schneider</p>
+              <p><strong>👤 Vorsitzender:</strong> Klaus Zimmermann</p>
+              <p><strong>🕐 Gottesdienste:</strong><br>Sonntag 10:00 Uhr - Göttliche Liturgie</p>
+              <p><strong>📞 Kontakt:</strong> +49 711 234567</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&h=400&fit=crop&q=80" 
+                 alt="St. Georg Hamburg" 
+                 class="card-image"
+                 loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">St. Georg Hamburg</h3>
+              <p><strong>📍 Adresse:</strong><br>Mönckebergstraße 7, 20095 Hamburg</p>
+              <p><strong>👨‍🦳 Priester:</strong> Pfarrer Matthias Schröder</p>
+              <p><strong>👤 Vorsitzender:</strong> Hans Meyer</p>
+              <p><strong>🕐 Gottesdienste:</strong><br>Sonntag 10:00 Uhr - Göttliche Liturgie</p>
+              <p><strong>📞 Kontakt:</strong> +49 40 789012</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Österreich & Niederlande -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-lg">Gemeinden in Österreich und den Niederlanden</h2>
+        
+        <div class="grid grid-2">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1609856878074-cf31e21ccb6b?w=600&h=400&fit=crop&q=80" 
+                 alt="St. Nikolaus Wien" 
+                 class="card-image"
+                 loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">St. Nikolaus Wien</h3>
+              <p><strong>🇦🇹 Österreich</strong></p>
+              <p><strong>📍 Adresse:</strong><br>Stephansplatz 3, 1010 Wien</p>
+              <p><strong>👨‍🦳 Priester:</strong> Pfarrer Alexander Fischer</p>
+              <p><strong>👤 Vorsitzender:</strong> Johann Huber</p>
+              <p><strong>🕐 Gottesdienste:</strong><br>Sonntag 09:30 Uhr - Göttliche Liturgie</p>
+              <p><strong>📞 Kontakt:</strong> +43 1 123456</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1583251292126-31d17dc8a0dc?w=600&h=400&fit=crop&q=80" 
+                 alt="St. Antonius Amsterdam" 
+                 class="card-image"
+                 loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">St. Antonius Amsterdam</h3>
+              <p><strong>🇳🇱 Niederlande</strong></p>
+              <p><strong>📍 Adresse:</strong><br>Damstraat 15, 1012 Amsterdam</p>
+              <p><strong>👨‍🦳 Priester:</strong> Pfarrer Christoph van Berg</p>
+              <p><strong>👤 Vorsitzender:</strong> Jan de Vries</p>
+              <p><strong>🕐 Gottesdienste:</strong><br>Zondag 11:00 uur - Goddelijke Liturgie</p>
+              <p><strong>📞 Kontakt:</strong> +31 20 654321</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="logo" style="color: var(--color-secondary); margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">☦</div>
+            <span>Metropolie</span>
+          </div>
+          <p>Die Antiochenisch-Orthodoxe Metropolie von Deutschland und Mitteleuropa dient der orthodoxen Gemeinschaft in Liebe und apostolischer Tradition.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Navigation</h3>
+          <ul class="footer-nav">
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="gemeinden.html">Gemeinden</a></li>
+            <li><a href="gottesdienste.html">Gottesdienste</a></li>
+            <li><a href="termine.html">Termine</a></li>
+            <li><a href="nachrichten.html">Nachrichten</a></li>
+            <li><a href="kloster.html">Kloster</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column footer-contact">
+          <h3>Kontakt</h3>
+          <p>📍 Beispielstraße 123<br>80331 München<br>Deutschland</p>
+          <p>📞 +49 (0) 89 123456</p>
+          <p>✉️ info@antiochian-metropolie.de</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Bleiben Sie verbunden</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="YouTube">📹</a>
+            <a href="#" aria-label="Telegram">✈️</a>
+          </div>
+          <h4 style="margin-top: var(--spacing-md); color: var(--color-secondary);">Newsletter</h4>
+          <form class="newsletter-form" aria-label="Newsletter anmelden">
+            <input type="email" placeholder="Ihre E-Mail" required aria-label="E-Mail Adresse">
+            <button type="submit">Anmelden</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Antiochenisch-Orthodoxe Metropolie von Deutschland und Mitteleuropa. Alle Rechte vorbehalten.</p>
+        <div class="footer-links">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

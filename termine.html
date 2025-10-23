@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aktuelle Termine und Veranstaltungen der Antiochenisch-Orthodoxen Metropolie.">
+  <title>Termine - Antiochenisch-Orthodoxe Metropolie</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☦</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-main">Zum Hauptinhalt springen</a>
+
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">☦</div>
+        <span>Metropolie von Deutschland</span>
+      </a>
+      
+      <button class="nav-toggle" aria-label="Navigation öffnen" id="navToggle">☰</button>
+      
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="gemeinden.html">Gemeinden</a></li>
+          <li><a href="gottesdienste.html">Gottesdienste</a></li>
+          <li><a href="termine.html">Termine</a></li>
+          <li><a href="nachrichten.html">Nachrichten</a></li>
+          <li><a href="kloster.html">Kloster</a></li>
+          <li><a href="chor.html">Chor</a></li>
+          <li><a href="pastorale-arbeit.html">Pastorale Arbeit</a></li>
+          <li><a href="mediencenter.html">Mediencenter</a></li>
+          <li><a href="kontakt.html" class="cta-button">Kontakt & Spenden</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <section class="hero" style="height: 40vh; min-height: 300px;">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=800&fit=crop&q=80" 
+           alt="Kalender" 
+           class="hero-image"
+           loading="eager">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Termine & Veranstaltungen</h1>
+        <p>Bleiben Sie auf dem Laufenden über alle kirchlichen Ereignisse</p>
+      </div>
+    </section>
+
+    <!-- Filter -->
+    <section class="section" style="padding-top: var(--spacing-lg);">
+      <div class="container">
+        <div style="background: var(--color-white); padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin-bottom: var(--spacing-lg);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md);">
+            <div class="filter-group">
+              <label for="filterCategory">Kategorie</label>
+              <select id="filterCategory" style="width: 100%; padding: var(--spacing-xs) var(--spacing-sm); border: 2px solid var(--color-background); border-radius: var(--radius-md); font-family: var(--font-sans);">
+                <option value="">Alle Kategorien</option>
+                <option value="gottesdienst">Gottesdienst</option>
+                <option value="feiertag">Feiertag</option>
+                <option value="jugend">Jugendarbeit</option>
+                <option value="bildung">Bildung</option>
+                <option value="sozial">Soziales</option>
+                <option value="chor">Chor</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label for="filterLocation">Ort</label>
+              <select id="filterLocation" style="width: 100%; padding: var(--spacing-xs) var(--spacing-sm); border: 2px solid var(--color-background); border-radius: var(--radius-md); font-family: var(--font-sans);">
+                <option value="">Alle Orte</option>
+                <option value="muenchen">München</option>
+                <option value="berlin">Berlin</option>
+                <option value="koeln">Köln</option>
+                <option value="frankfurt">Frankfurt</option>
+                <option value="stuttgart">Stuttgart</option>
+                <option value="wien">Wien</option>
+                <option value="amsterdam">Amsterdam</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filterMonth">Monat</label>
+              <select id="filterMonth" style="width: 100%; padding: var(--spacing-xs) var(--spacing-sm); border: 2px solid var(--color-background); border-radius: var(--radius-md); font-family: var(--font-sans);">
+                <option value="">Alle Monate</option>
+                <option value="12">Dezember 2025</option>
+                <option value="01">Januar 2026</option>
+                <option value="02">Februar 2026</option>
+                <option value="03">März 2026</option>
+                <option value="04">April 2026</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Termine -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="events-grid">
+          
+          <article class="event-card" data-category="gottesdienst" data-location="muenchen" data-month="12">
+            <div class="event-date">
+              <span class="day">25</span>
+              <span class="month">DEZ</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Weihnachtsgottesdienst</h3>
+              <div class="event-meta">
+                <span>📍 St. Georg München</span>
+                <span>🕐 10:00 Uhr</span>
+              </div>
+              <p class="card-text">Feierliche Göttliche Liturgie zum Weihnachtsfest mit anschließendem Beisammensein.</p>
+              <span class="event-category">Gottesdienst</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="feiertag" data-location="berlin" data-month="01">
+            <div class="event-date">
+              <span class="day">01</span>
+              <span class="month">JAN</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Neujahrsgottesdienst</h3>
+              <div class="event-meta">
+                <span>📍 Hl. Kreuz Berlin</span>
+                <span>🕐 09:00 Uhr</span>
+              </div>
+              <p class="card-text">Gemeinsamer Gottesdienst zum Jahresbeginn mit Segensgebeten für das neue Jahr.</p>
+              <span class="event-category">Feiertag</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="feiertag" data-location="alle" data-month="01">
+            <div class="event-date">
+              <span class="day">07</span>
+              <span class="month">JAN</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Orthodoxes Weihnachtsfest</h3>
+              <div class="event-meta">
+                <span>📍 Alle Gemeinden</span>
+                <span>🕐 Verschiedene Zeiten</span>
+              </div>
+              <p class="card-text">Die Geburt Christi nach dem julianischen Kalender. Festgottesdienste in allen Gemeinden.</p>
+              <span class="event-category">Feiertag</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="jugend" data-location="frankfurt" data-month="01">
+            <div class="event-date">
+              <span class="day">15</span>
+              <span class="month">JAN</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Jugendtreffen</h3>
+              <div class="event-meta">
+                <span>📍 Hl. Dimitrios Frankfurt</span>
+                <span>🕐 15:00 Uhr</span>
+              </div>
+              <p class="card-text">Monatliches Treffen der Jugendgruppe mit Diskussion, Gebet und Gemeinschaft.</p>
+              <span class="event-category">Jugendarbeit</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="feiertag" data-location="alle" data-month="01">
+            <div class="event-date">
+              <span class="day">19</span>
+              <span class="month">JAN</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Theophanie (Taufe Christi)</h3>
+              <div class="event-meta">
+                <span>📍 Alle Gemeinden</span>
+                <span>🕐 Verschiedene Zeiten</span>
+              </div>
+              <p class="card-text">Fest der Taufe Christi im Jordan mit Wasserweihe-Zeremonie.</p>
+              <span class="event-category">Feiertag</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="bildung" data-location="muenchen" data-month="02">
+            <div class="event-date">
+              <span class="day">05</span>
+              <span class="month">FEB</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Theologisches Seminar</h3>
+              <div class="event-meta">
+                <span>📍 St. Georg München</span>
+                <span>🕐 18:00 Uhr</span>
+              </div>
+              <p class="card-text">Vortrag von Bischof Hanna: "Die Väter der Kirche von Antiochien"</p>
+              <span class="event-category">Bildung</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="sozial" data-location="koeln" data-month="02">
+            <div class="event-date">
+              <span class="day">12</span>
+              <span class="month">FEB</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Suppenküche & Sozialdienst</h3>
+              <div class="event-meta">
+                <span>📍 St. Johannes Köln</span>
+                <span>🕐 12:00 Uhr</span>
+              </div>
+              <p class="card-text">Monatliche Versorgung Bedürftiger mit warmem Essen. Helfer willkommen!</p>
+              <span class="event-category">Soziales</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="chor" data-location="berlin" data-month="02">
+            <div class="event-date">
+              <span class="day">20</span>
+              <span class="month">FEB</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Chorkonzert</h3>
+              <div class="event-meta">
+                <span>📍 Hl. Kreuz Berlin</span>
+                <span>🕐 19:00 Uhr</span>
+              </div>
+              <p class="card-text">Konzert des Chors der Metropolie mit byzantinischen Hymnen.</p>
+              <span class="event-category">Chor</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="feiertag" data-location="alle" data-month="03">
+            <div class="event-date">
+              <span class="day">03</span>
+              <span class="month">MÄR</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Beginn der Großen Fastenzeit</h3>
+              <div class="event-meta">
+                <span>📍 Alle Gemeinden</span>
+                <span>🕐 Verschiedene Zeiten</span>
+              </div>
+              <p class="card-text">Beginn der 40-tägigen Fastenzeit vor Ostern mit besonderen Gottesdiensten.</p>
+              <span class="event-category">Feiertag</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="bildung" data-location="stuttgart" data-month="03">
+            <div class="event-date">
+              <span class="day">10</span>
+              <span class="month">MÄR</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Ikonenmalkurs</h3>
+              <div class="event-meta">
+                <span>📍 St. Maria Stuttgart</span>
+                <span>🕐 14:00 - 18:00 Uhr</span>
+              </div>
+              <p class="card-text">Workshop zur traditionellen Ikonenmalerei. Anmeldung erforderlich.</p>
+              <span class="event-category">Bildung</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="gottesdienst" data-location="wien" data-month="03">
+            <div class="event-date">
+              <span class="day">25</span>
+              <span class="month">MÄR</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Mariä Verkündigung</h3>
+              <div class="event-meta">
+                <span>📍 St. Nikolaus Wien</span>
+                <span>🕐 09:30 Uhr</span>
+              </div>
+              <p class="card-text">Fest der Verkündigung an Maria mit feierlicher Liturgie.</p>
+              <span class="event-category">Gottesdienst</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="jugend" data-location="frankfurt" data-month="03">
+            <div class="event-date">
+              <span class="day">28</span>
+              <span class="month">MÄR</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Jugend-Pilgerwanderung</h3>
+              <div class="event-meta">
+                <span>📍 Frankfurt Umland</span>
+                <span>🕐 09:00 Uhr</span>
+              </div>
+              <p class="card-text">Gemeinsame Pilgerwanderung der Jugendgruppen mit spirituellen Impulsen.</p>
+              <span class="event-category">Jugendarbeit</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="feiertag" data-location="alle" data-month="04">
+            <div class="event-date">
+              <span class="day">20</span>
+              <span class="month">APR</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Orthodoxes Osterfest</h3>
+              <div class="event-meta">
+                <span>📍 Alle Gemeinden</span>
+                <span>🕐 Verschiedene Zeiten</span>
+              </div>
+              <p class="card-text">Das Fest der Auferstehung Christi - höchster Feiertag der Orthodoxie.</p>
+              <span class="event-category">Feiertag</span>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="bildung" data-location="amsterdam" data-month="04">
+            <div class="event-date">
+              <span class="day">25</span>
+              <span class="month">APR</span>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Theologische Vortragsreihe</h3>
+              <div class="event-meta">
+                <span>📍 St. Antonius Amsterdam</span>
+                <span>🕐 19:00 Uhr</span>
+              </div>
+              <p class="card-text">Thema: "Die Bedeutung der Auferstehung in der orthodoxen Theologie"</p>
+              <span class="event-category">Bildung</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container text-center">
+        <h2>Möchten Sie regelmäßig über Termine informiert werden?</h2>
+        <p>Abonnieren Sie unseren Newsletter oder folgen Sie uns in den sozialen Medien.</p>
+        <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap; margin-top: var(--spacing-lg);">
+          <a href="#" class="btn btn-secondary">Newsletter abonnieren</a>
+          <a href="kontakt.html" class="btn btn-outline">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="logo" style="color: var(--color-secondary); margin-bottom: var(--spacing-md);">
+            <div class="logo-icon">☦</div>
+            <span>Metropolie</span>
+          </div>
+          <p>Die Antiochenisch-Orthodoxe Metropolie von Deutschland und Mitteleuropa dient der orthodoxen Gemeinschaft in Liebe und apostolischer Tradition.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Navigation</h3>
+          <ul class="footer-nav">
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="gemeinden.html">Gemeinden</a></li>
+            <li><a href="gottesdienste.html">Gottesdienste</a></li>
+            <li><a href="termine.html">Termine</a></li>
+            <li><a href="nachrichten.html">Nachrichten</a></li>
+            <li><a href="kloster.html">Kloster</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column footer-contact">
+          <h3>Kontakt</h3>
+          <p>📍 Beispielstraße 123<br>80331 München<br>Deutschland</p>
+          <p>📞 +49 (0) 89 123456</p>
+          <p>✉️ info@antiochian-metropolie.de</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Bleiben Sie verbunden</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="YouTube">📹</a>
+            <a href="#" aria-label="Telegram">✈️</a>
+          </div>
+          <h4 style="margin-top: var(--spacing-md); color: var(--color-secondary);">Newsletter</h4>
+          <form class="newsletter-form" aria-label="Newsletter anmelden">
+            <input type="email" placeholder="Ihre E-Mail" required aria-label="E-Mail Adresse">
+            <button type="submit">Anmelden</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Antiochenisch-Orthodoxe Metropolie von Deutschland und Mitteleuropa. Alle Rechte vorbehalten.</p>
+        <div class="footer-links">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
